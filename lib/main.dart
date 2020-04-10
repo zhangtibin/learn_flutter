@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'model/post.dart';
+import 'Demo/list_view_demo.dart';
+import 'Demo/hello.dart';
+import 'Demo/drawer_demo.dart';
+import 'Demo/bottom_navigation_bar_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,67 +12,65 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.cyan
-      ),
-    );
-  }
-}
-
-class Hello extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Center(
-      child: Text(
-        'Hello world!',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          fontSize: 38.0,
-          fontWeight: FontWeight.bold,
-          color: Colors.blue
-        ),
-      ),
+          primarySwatch: Colors.cyan,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white70),
     );
   }
 }
 
 class Home extends StatelessWidget {
-  Widget _listItemBuilder(BuildContext context, int index) {
-    return Container(
-      color: Colors.white,
-      margin: EdgeInsets.all(8.0),
-      child: Column(
-        children: <Widget>[
-          Image.network(posts[index].imageUrl),
-          SizedBox(height: 10),
-          Text(
-            '标题：' + posts[index].title,
-            style: Theme.of(context).textTheme.title,
-          ),
-          SizedBox(height:8),
-          Text(
-            '作者：' + posts[index].author,
-            style: Theme.of(context).textTheme.subhead,
-          ),
-          SizedBox(height: 10),
-        ],
-      ),
-    );
-  }
+  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('首页'),
-          elevation: 0.0,//阴影
-        ),
-        body: ListView.builder(
-          itemCount: posts.length,
-          itemBuilder: _listItemBuilder,
-        )
-      );
+    return DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            // leading: IconButton(
+            //     icon: Icon(Icons.menu),
+            //     tooltip: 'Navigation',
+            //     onPressed: () => debugPrint('Navigation Button is pressed')
+            //     ),
+            title: Text('首页'),
+            actions: <Widget>[
+              IconButton(
+                  icon: Icon(Icons.search),
+                  tooltip: 'Search',
+                  onPressed: () => debugPrint('Search button is pressed'))
+            ],
+            elevation: 0.0, //阴影
+            bottom: TabBar(
+                unselectedLabelColor: Colors.black38,
+                indicatorColor: Colors.black54,
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorWeight: 1.0,
+                tabs: <Widget>[
+                  Tab(icon: Icon(Icons.local_florist)),
+                  Tab(icon: Icon(Icons.history)),
+                  Tab(icon: Icon(Icons.directions_bike))
+                ]),
+          ),
+          // body: ListViewDemo()
+          body: TabBarView(children: <Widget>[
+            ListViewDemo(),
+            Icon(
+              Icons.history,
+              size: 128,
+              color: Colors.black12,
+            ),
+            Icon(
+              Icons.directions_bike,
+              size: 128,
+              color: Colors.black12,
+            ),
+          ]),
+          drawer: DrawerDemo(),
+          bottomNavigationBar: BottomNavigationBarDemo(),
+        ));
   }
 }
