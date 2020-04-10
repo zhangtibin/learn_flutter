@@ -4,6 +4,7 @@ import 'Demo/hello.dart';
 import 'Demo/drawer_demo.dart';
 import 'Demo/bottom_navigation_bar_demo.dart';
 import 'Demo/basic_demo.dart';
+import 'Demo/layout_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,11 +66,12 @@ class Home extends StatelessWidget {
             //   color: Colors.black12,
             // ),
             BasicDemo(),
-            Icon(
-              Icons.directions_bike,
-              size: 128,
-              color: Colors.black12,
-            ),
+            // Icon(
+            //   Icons.directions_bike,
+            //   size: 128,
+            //   color: Colors.black12,
+            // ),
+            LayoutDemo(),
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomNavigationBarDemo(),
