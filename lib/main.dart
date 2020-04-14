@@ -7,6 +7,7 @@ import 'Demo/basic_demo.dart';
 import 'Demo/layout_demo.dart';
 import 'Demo/view_demo.dart';
 import 'Demo/sliver_demo.dart';
+import 'Demo/navigator_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,8 +18,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
       // home: SliverDemo(),
+      // home: NavigatorDemo(),
+      // initialRoute: '/about',
+      initialRoute: '/',//标识跟路由
+      routes: {//路由
+        // '/': (context) => NavigatorDemo(),
+        '/': (context) => Home(),
+        '/about': (context)=> Page(title: 'Robin'),
+      },
       theme: ThemeData(
           primarySwatch: Colors.cyan,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
