@@ -8,6 +8,7 @@ import 'Demo/layout_demo.dart';
 import 'Demo/view_demo.dart';
 import 'Demo/sliver_demo.dart';
 import 'Demo/navigator_demo.dart';
+import 'Demo/form_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,11 +28,13 @@ class MyApp extends StatelessWidget {
         // '/': (context) => NavigatorDemo(),
         '/': (context) => Home(),
         '/about': (context)=> Page(title: 'Robin'),
+        '/form': (context)=> FormDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.cyan,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
           splashColor: Colors.white70),
+          // accentColor: Color.fromRGBO(3, 54, 255, 1),
     );
   }
 }
@@ -96,3 +99,4 @@ class Home extends StatelessWidget {
         ));
   }
 }
+
