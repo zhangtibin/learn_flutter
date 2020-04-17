@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter/Demo/post_detail.dart';
 import '../model/post.dart';
 
+/*  Brief: 
+ *  @test: test font
+ *  @param {type} 
+ *  @return: 
+ *  @LastEditors: zhangtibin
+ *  @LastEditTime: 2020-04-17 14:49:22
+ *  @Deprecated: false
+ */ 
+
 class ListViewDemo extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
     return Container(
@@ -48,9 +57,18 @@ class ListViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    /*  Brief: 
+     *  @test: test font
+     *  @param {type} 
+     *  @return: 
+     *  @LastEditors: zhangtibin
+     *  @LastEditTime: Do not edit
+     *  @Deprecated: false
+     */ 
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: _listItemBuilder,
+      
     );
   }
 }

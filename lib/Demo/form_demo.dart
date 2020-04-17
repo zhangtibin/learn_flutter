@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/Demo/material_components.dart';
 
 class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Register'),
+        elevation:0,
+      ),
       body: Theme(
         // data: ThemeData(//使用ThemeData完全覆盖之前主题
         //   primaryColor: Colors.white,
@@ -43,8 +48,11 @@ class _RegisterFormState extends State<RegisterForm> {
       registerFormKey.currentState.save();
       debugPrint('userName：$userName');
       debugPrint('password：$password');
-      Scaffold.of(context).showSnackBar (
-        SnackBar(content: Text('Registering....'))
+      // Scaffold.of(context).showSnackBar (
+      //   SnackBar(content: Text('Registering....'))
+      // );
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context)=>MaterialComponentDemo()),
       );
     } else {
       setState(() {
@@ -66,9 +74,6 @@ class _RegisterFormState extends State<RegisterForm> {
     }
     return null;
   }
-
-  
-
   @override
   Widget build(BuildContext context) {
     return Form(

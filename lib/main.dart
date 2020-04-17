@@ -9,6 +9,7 @@ import 'Demo/view_demo.dart';
 import 'Demo/sliver_demo.dart';
 import 'Demo/navigator_demo.dart';
 import 'Demo/form_demo.dart';
+import 'Demo/material_components.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,24 +24,26 @@ class MyApp extends StatelessWidget {
       // home: SliverDemo(),
       // home: NavigatorDemo(),
       // initialRoute: '/about',
-      initialRoute: '/',//标识跟路由
-      routes: {//路由
+      initialRoute: '/', //标识跟路由
+      routes: {
+        //路由
         // '/': (context) => NavigatorDemo(),
         '/': (context) => Home(),
-        '/about': (context)=> Page(title: 'Robin'),
-        '/form': (context)=> FormDemo(),
+        '/about': (context) => Page(title: 'Robin'),
+        '/form': (context) => FormDemo(),
+        '/material': (context) => MaterialComponentDemo(),
       },
       theme: ThemeData(
-          primarySwatch: Colors.cyan,
-          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white70),
-          // accentColor: Color.fromRGBO(3, 54, 255, 1),
+        primarySwatch: Colors.cyan,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70,
+      ),
+      // accentColor: Color.fromRGBO(3, 54, 255, 1),
     );
   }
 }
 
 class Home extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -99,4 +102,3 @@ class Home extends StatelessWidget {
         ));
   }
 }
-
