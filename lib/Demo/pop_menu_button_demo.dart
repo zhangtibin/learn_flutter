@@ -27,7 +27,7 @@ class _PopupMenuButtonDemoState extends State<PopupMenuButtonDemo> {
               children: <Widget>[
                 PopupMenuButton(
                   onSelected: (value) {
-                    print('Select：$value');
+                    print('Select?$value');
                     setState(() {
                       _currentMenuItem = value;
                     });
