@@ -10,8 +10,12 @@ import 'Demo/sliver_demo.dart';
 import 'Demo/navigator_demo.dart';
 import 'Demo/form_demo.dart';
 import 'Demo/material_components.dart';
+import 'Demo/page_view_demo.dart';
+import 'Demo/page_item_builder_demo.dart_page.dart';
+import 'Demo/grid_view_count_demo.dart';
 
 void main() {
+  // runApp(MyApp());
   runApp(MyApp());
 }
 
@@ -29,7 +33,7 @@ class MyApp extends StatelessWidget {
         //路由
         // '/': (context) => NavigatorDemo(),
         '/': (context) => Home(),
-        '/about': (context) => Page(title: 'Robin'),
+        // '/about': (context) => Page(title: 'Robin'),
         '/form': (context) => FormDemo(),
         '/material': (context) => MaterialComponentDemo(),
       },
@@ -48,7 +52,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-        length: 5,
+        length: 8,
         child: Scaffold(
           appBar: AppBar(
             // leading: IconButton(
@@ -61,7 +65,9 @@ class Home extends StatelessWidget {
               IconButton(
                   icon: Icon(Icons.search),
                   tooltip: 'Search',
-                  onPressed: () => debugPrint('Search button is pressed'))
+                  // onPressed: () => debugPrint('Search button is pressed'))
+                  onPressed: ()=>debugPrint('search button is press')
+              )
             ],
             elevation: 0.0, //阴影
             bottom: TabBar(
@@ -75,6 +81,9 @@ class Home extends StatelessWidget {
                   Tab(icon: Icon(Icons.directions_bike)),
                   Tab(icon: Icon(Icons.view_quilt)),
                   Tab(icon: Icon(Icons.slow_motion_video)),
+                  Tab(icon: Icon(Icons.pages_rounded)),
+                  Tab(icon: Icon(Icons.pages_sharp)),
+                  Tab(icon: Icon(Icons.grid_off_rounded)),
                 ]),
           ),
           // body: ListViewDemo()
@@ -96,6 +105,12 @@ class Home extends StatelessWidget {
             ViewDemo(),
 
             SliverDemo(),
+
+            PageViewDemo(),
+
+            PageItemBuilderDemo(),
+
+            GridViewCountDemo(),
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomNavigationBarDemo(),

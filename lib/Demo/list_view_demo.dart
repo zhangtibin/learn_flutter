@@ -7,9 +7,9 @@ import '../model/post.dart';
  *  @param {type} 
  *  @return: 
  *  @LastEditors: zhangtibin
- *  @LastEditTime: 2020-04-17 14:49:22
+ *  @LastEditTime: 2021-01-03 11:38:53
  *  @Deprecated: false
- */ 
+ */
 
 class ListViewDemo extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
@@ -20,7 +20,8 @@ class ListViewDemo extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              Image.network(posts[index].imageUrl),
+              Image.network(posts[index].imageUrl,
+                  fit: BoxFit.fill),
               SizedBox(height: 10),
               Text(
                 '标题：' + posts[index].title,
@@ -43,7 +44,8 @@ class ListViewDemo extends StatelessWidget {
                 // onTap: () => debugPrint('Tap'),
                 onTap: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context)=> PostDetail(post: posts[index])),
+                    MaterialPageRoute(
+                        builder: (context) => PostDetail(post: posts[index])),
                   );
                 },
               ),
@@ -64,11 +66,10 @@ class ListViewDemo extends StatelessWidget {
      *  @LastEditors: zhangtibin
      *  @LastEditTime: Do not edit
      *  @Deprecated: false
-     */ 
+     */
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: _listItemBuilder,
-      
     );
   }
 }

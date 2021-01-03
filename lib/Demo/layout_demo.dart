@@ -14,8 +14,8 @@ class LayoutDemo extends StatelessWidget {
     return Container(
       child: Column(
         mainAxisAlignment:
-            MainAxisAlignment.center, //主轴对齐方式 Colume 为竖直方向 Row为垂直方向
-        // crossAxisAlignment: CrossAxisAlignment.center,//交叉轴
+            MainAxisAlignment.spaceAround, //主轴对齐方式 Colume 为竖直方向 Row为垂直方向
+        // crossAxisAlignment: CrossAxisAlignment.center,//交叉轴 
         children: <Widget>[
           ConstrainedBox(
             constraints: BoxConstraints(
@@ -27,8 +27,8 @@ class LayoutDemo extends StatelessWidget {
             ),
           ),
           // AspectRatioDemo(),
-          // StackDemo(),
-          // IconBadge(Icons.pool),
+          StackDemo(),
+          IconBadge(Icons.pool),
           // IconBadge(Icons.beach_access, size: 64,),
           // IconBadge(Icons.airplanemode_active),
         ],
@@ -84,10 +84,10 @@ class StackDemo extends StatelessWidget {
               color: Color.fromRGBO(3, 53, 255, 1.0),
               // borderRadius: BorderRadius.circular(10),
               shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [
-                Color.fromRGBO(39, 135, 234, 1.0),
-                Color.fromRGBO(23, 20, 120, 1.0),
-              ]),
+              // gradient: RadialGradient(colors: [
+              //   Color.fromRGBO(39, 135, 234, 1.0),
+              //   Color.fromRGBO(23, 20, 120, 1.0),
+              // ]),
             ),
             child: Icon(
               Icons.brightness_2,

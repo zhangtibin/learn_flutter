@@ -1,80 +1,91 @@
 import 'package:flutter/material.dart';
+
 class BasicDemo extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     // return TextDemo();
     // return RichTextDemo();
+    return ContanerDemo();
+  }
+}
+
+class ContanerDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Container(
       // color: Colors.white10,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage('https://static.clouderwork.com/job/a4/18/6b06d022-e511-45d8-a630-0135c559f198.jpg'),
+          image: NetworkImage(
+              'https://static.clouderwork.com/job/a4/18/6b06d022-e511-45d8-a630-0135c559f198.jpg'),
           alignment: Alignment.topCenter,
+          repeat: ImageRepeat.repeatY,//Y方向可重复
           fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(Colors.indigoAccent[400].withOpacity(0.5), BlendMode.hardLight),
-          
-          ),
-
+          colorFilter: ColorFilter.mode(
+              Colors.indigoAccent[400].withOpacity(0.5), BlendMode.hardLight),
+        ),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget> [
+        mainAxisAlignment: MainAxisAlignment.center,//主轴对齐方式
+        children: <Widget>[
           Container(
-            child: Icon(Icons.pool, size: 34, color: Colors.white,),
+            child: Icon(
+              Icons.pool,
+              size: 34,
+              color: Colors.white,
+            ),
             // color: Color.fromRGBO(3, 54, 255, 1),
-            padding: EdgeInsets.all(16.0),
-            margin: EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(16.0),//内边距
+            margin: EdgeInsets.all(8.0),//外边距
             width: 90,
             height: 90,
             decoration: BoxDecoration(
               color: Color.fromRGBO(255, 54, 255, 1.0),
-              border: Border.all(
-                color: Colors.indigoAccent[100],
+              border: Border.all(//边框 border.all 表示四周添加统一边框
+                  color: Colors.indigoAccent[100],
                   width: 3,
                   style: BorderStyle.solid
-                // top: BorderSide(
-                //   color: Colors.indigoAccent[100],
-                //   width: 3,
-                //   style: BorderStyle.solid
-                // ),
-                // bottom: BorderSide(
-                //   color: Colors.indigoAccent[100],
-                //   width: 3,
-                //   style: BorderStyle.solid
-                // ),
-                // left: BorderSide(
-                //   color: Colors.indigoAccent[100],
-                //   width: 3,
-                //   style: BorderStyle.solid
-                // ),
-              ),
-              // borderRadius: BorderRadius.circular(13.0),//添加圆角（圆形时不能添加）
+                  // top: BorderSide(
+                  //   color: Colors.indigoAccent[100],
+                  //   width: 3,
+                  //   style: BorderStyle.solid
+                  // ),
+                  // bottom: BorderSide(
+                  //   color: Colors.indigoAccent[100],
+                  //   width: 3,
+                  //   style: BorderStyle.solid
+                  // ),
+                  // left: BorderSide(
+                  //   color: Colors.indigoAccent[100],
+                  //   width: 3,
+                  //   style: BorderStyle.solid
+                  // ),
+                  ),
+              // borderRadius: BorderRadius.circular(13.0),//添加圆角（圆形时不能添加） circular 表示在盒子的四周添加统一的效果
               boxShadow: [
                 BoxShadow(
-                  offset: Offset(6, 7),
-                  color: Color.fromRGBO(16, 20, 188, 1),
-                  blurRadius: 25,
-                  spreadRadius: -9.0
-                ),
+                    offset: Offset(6, 7),
+                    color: Color.fromRGBO(16, 20, 188, 1),
+                    blurRadius: 25,//模糊程度
+                    spreadRadius: -9.0),//阴影扩散的程度
               ],
-              shape: BoxShape.circle,//添加形状
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(7, 103, 33, 1.0),
-                  Color.fromRGBO(3, 55, 20, 0.6)
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter
-              ),
+              shape: BoxShape.circle, //添加形状
+              // gradient: LinearGradient(//渐变 RadiaGradient 镜像渐变； LinearGradient 线性渐变
+              //   colors: [
+              //     Color.fromRGBO(7, 103, 33, 1.0),
+              //     Color.fromRGBO(3, 55, 20, 0.6)
+              //   ],
+              //   begin: Alignment.topCenter,
+              //   end: Alignment.bottomCenter
+              // ),
             ),
           ),
         ],
-      ) ,
+      ),
     );
   }
-} 
+}
 
 class RichTextDemo extends StatelessWidget {
   @override
@@ -86,16 +97,13 @@ class RichTextDemo extends StatelessWidget {
         style: TextStyle(
           fontSize: 40,
           color: Colors.red,
-          fontStyle: FontStyle.italic,//斜体
+          fontStyle: FontStyle.italic, //斜体
           fontWeight: FontWeight.w100,
         ),
         children: [
           TextSpan(
             text: '.net',
-            style: TextStyle(
-              fontSize: 17.0,
-              color: Colors.blueGrey
-            ),
+            style: TextStyle(fontSize: 17.0, color: Colors.blueGrey),
           ),
         ],
       ),
@@ -110,6 +118,7 @@ class TextDemo extends StatelessWidget {
     color: Colors.blueGrey,
   );
   final String _auther = '王浩';
+  final String _descrition = "君不见黄河之水天上来，奔流到海不复回";
   final String _title = '《Stack OVerflow》';
   @override
   Widget build(BuildContext context) {
@@ -119,7 +128,7 @@ class TextDemo extends StatelessWidget {
       textAlign: TextAlign.left,
       style: _textStyle,
       maxLines: 5,
-      overflow: TextOverflow.ellipsis,//溢出省略号
+      overflow: TextOverflow.ellipsis, //溢出省略号
     );
   }
 }
