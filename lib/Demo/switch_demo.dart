@@ -31,15 +31,15 @@ class _SwitchDemoState extends State<SwitchDemo> {
               secondary: Icon(_switchItemA ? Icons.visibility:Icons.visibility_off),
               selected: _switchItemA,
             ),
-            // Text(_switchItemA ? '😁':'😣', style: TextStyle(fontSize:32.0),),
-            // Switch(
-            //   value: _switchItemA,
-            //   onChanged: (value) {
-            //     setState(() {
-            //       _switchItemA = value;
-            //     });
-            //   },
-            // ),
+            Text(_switchItemA ? '😁':'😣', style: TextStyle(fontSize:32.0),),
+            Switch(
+              value: _switchItemA,
+              onChanged: (value) {
+                setState(() {
+                  _switchItemA = value;
+                });
+              },
+            ),
           ],
         ),
       ),

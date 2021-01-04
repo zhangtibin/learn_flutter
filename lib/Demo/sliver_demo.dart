@@ -29,7 +29,7 @@ class SliverDemo extends StatelessWidget {
               ),
             ),
           ),
-          SliverSafeArea(
+          SliverSafeArea(//在安全区域内显示
             sliver: SliverPadding(
               padding: EdgeInsets.all(8.0),
               sliver: SliverGridDemo(),
@@ -37,57 +37,6 @@ class SliverDemo extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-//列表视图
-class SliverListDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return Padding(
-            padding: EdgeInsets.only(bottom: 32.0),
-            child: Material(
-              borderRadius: BorderRadius.circular(12.0), //圆角
-              elevation: 14.0, //阴影
-              shadowColor: Colors.grey.withOpacity(0.6),
-              child: Stack(
-                children: <Widget>[
-                  AspectRatio(
-                    aspectRatio: 16 / 9,
-                    child: Image.network(
-                      posts[index].imageUrl,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 16,
-                    right: 16,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        Text(
-                          posts[index].title,
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                        Text(
-                          posts[index].author,
-                          style: TextStyle(fontSize: 13.0, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-        childCount: posts.length,
       ),
     );
   }

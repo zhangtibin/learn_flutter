@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/Demo/home_page.dart';
 
 class NavigatorDemo extends StatelessWidget {
   @override
@@ -10,11 +11,12 @@ class NavigatorDemo extends StatelessWidget {
           children: <Widget> [
             FlatButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context)=> Page(title: 'Home',),
-                  ),
-                );
+                 Navigator.pushNamed(context, "/home");
+                // Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (BuildContext context)=> Page(title: 'Home',),
+                //   ),
+                // );
               }, 
               child: Text('Home')
             ),
@@ -23,6 +25,13 @@ class NavigatorDemo extends StatelessWidget {
                 Navigator.pushNamed(context, '/about');
               }, 
               child: Text('About')
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context)=>Page(title: "newPage")));
+              }, 
+              child: Text('新页面')
             ),
           ],
         ),

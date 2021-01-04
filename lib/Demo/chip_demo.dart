@@ -1,3 +1,11 @@
+/*  Brief: 
+ *  @Remark: 
+ *  @param {*}
+ *  @return {*}
+ *  @LastEditors: zhangtibin
+ *  @LastEditTime: 2021-01-03 17:25:28
+ *  @Deprecated: false
+ */
 import 'package:flutter/material.dart';
 
 class ChipDemo extends StatefulWidget {
@@ -12,7 +20,7 @@ class _ChipDemoState extends State<ChipDemo> {
     'Lemon',
   ];
   String _action = 'Nothing';
-  List <String> _selected = [];
+  List<String> _selected = [];
   String _choice = 'Lemon';
 
   @override
@@ -119,7 +127,7 @@ class _ChipDemoState extends State<ChipDemo> {
                       selected: _selected.contains(tag),
                       onSelected: (value) {
                         setState(() {
-                          if(_selected.contains(tag)) {
+                          if (_selected.contains(tag)) {
                             _selected.remove(tag);
                           } else {
                             _selected.add(tag);

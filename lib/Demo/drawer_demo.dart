@@ -47,9 +47,11 @@ class DrawerDemo extends StatelessWidget {
           ListTile(
             title: Text('Settings', textAlign: TextAlign.center),
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => FormDemo()),
-              );
+              Navigator.pushNamed(context, "/form");
+              // Navigator.pushNamed(context, "/home");
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(builder: (context) => FormDemo()),
+              // );
             },
             leading: Icon(
               Icons.settings,

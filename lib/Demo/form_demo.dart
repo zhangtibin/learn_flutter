@@ -149,14 +149,14 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
       // onChanged: (value) {
       //   debugPrint('input：$value');
       // },
-      onSubmitted: (value) {
+      onSubmitted: (value) {//点击键盘完成按钮
         debugPrint('submit：$value');
       },
       decoration: InputDecoration(
         icon: Icon(Icons.subject),
         labelText: 'Title',
         hintText: '请输入title',
-        // border: InputBorder.none,
+        // border: InputBorder.none,//不要边框，默认有下划线
         // border: OutlineInputBorder(),
         filled: true,
       ),

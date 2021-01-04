@@ -44,21 +44,36 @@ class _RadioDemoState extends State<RadioDemo> {
               secondary: Icon(Icons.filter_2),
               selected: _radioGroupItemA == 1,
             ),
+            RadioListTile(
+              value: 2,
+              groupValue: _radioGroupItemA,
+              onChanged: _handleRadioValueChanged,
+              title: Text('Option C'),
+              subtitle: Text('Decrition'),
+              secondary: Icon(Icons.filter_3),
+              selected: _radioGroupItemA == 2,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                // Radio(//单选按钮
-                //   value: 0,
-                //   groupValue: _radioGroupItemA,
-                //   onChanged: _handleRadioValueChanged,
-                //   activeColor: Colors.black,
-                // ),
-                // Radio(
-                //   value: 1,
-                //   groupValue: _radioGroupItemA,
-                //   onChanged: _handleRadioValueChanged,
-                //   activeColor: Colors.black,
-                // ),
+                Radio(//单选按钮
+                  value: 0,
+                  groupValue: _radioGroupItemA,
+                  onChanged: _handleRadioValueChanged,
+                  activeColor: Colors.black,
+                ),
+                Radio(
+                  value: 1,
+                  groupValue: _radioGroupItemA,
+                  onChanged: _handleRadioValueChanged,
+                  activeColor: Colors.black,
+                ),
+                Radio(
+                  value: 2,
+                  groupValue: _radioGroupItemA,
+                  onChanged: _handleRadioValueChanged,
+                  activeColor: Colors.black,
+                ),
               ],
             ),
           ],
