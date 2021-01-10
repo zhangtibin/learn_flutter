@@ -15,6 +15,9 @@ import 'snack_bar_demo.dart';
 import 'expansion_panel_demo.dart';
 import 'chip_demo.dart';
 import 'data_table_demo.dart';
+import 'paginated_data_table_demo.dart';
+import 'card_demo.dart';
+import 'stepper_demo.dart';
 
 class MaterialComponentDemo extends StatelessWidget {
   @override
@@ -41,6 +44,10 @@ class MaterialComponentDemo extends StatelessWidget {
           ListItem(title: 'PopupButton', page: PopupMenuButtonDemo()),
           ListItem(title: 'ButtonDemo', page: ButtonDemo()),
           ListItem(title: 'FloatActionButton', page: FloatActionButtonDemo()),
+          ListItem(
+              title: 'PagintedDataTableDemo', page: PaginatedDataTableDemo()),
+          ListItem(title: 'CardDemo', page: CardDemo()),
+          ListItem(title: 'StepperDemo', page: StepperDemo()),
         ],
       ),
     );

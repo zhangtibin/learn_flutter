@@ -40,8 +40,7 @@ class Home extends StatelessWidget {
                   icon: Icon(Icons.search),
                   tooltip: 'Search',
                   // onPressed: () => debugPrint('Search button is pressed'))
-                  onPressed: ()=>debugPrint('search button is press')
-              )
+                  onPressed: () => debugPrint('search button is press'))
             ],
             elevation: 0.0, //阴影
             bottom: TabBar(
@@ -55,10 +54,10 @@ class Home extends StatelessWidget {
                   Tab(icon: Icon(Icons.directions_bike)),
                   Tab(icon: Icon(Icons.view_quilt)),
                   Tab(icon: Icon(Icons.slow_motion_video)),
-                  Tab(icon: Icon(Icons.pages_rounded)),
-                  Tab(icon: Icon(Icons.pages_sharp)),
-                  Tab(icon: Icon(Icons.grid_off_rounded)),
-                  Tab(icon: Icon(Icons.grid_off_sharp)),
+                  Tab(icon: Icon(Icons.photo_size_select_large)),
+                  Tab(icon: Icon(Icons.mail)),
+                  Tab(icon: Icon(Icons.settings_bluetooth)),
+                  Tab(icon: Icon(Icons.disc_full)),
                 ]),
           ),
           // body: ListViewDemo()

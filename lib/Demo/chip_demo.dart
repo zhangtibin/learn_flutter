@@ -37,8 +37,8 @@ class _ChipDemoState extends State<ChipDemo> {
           children: <Widget>[
             Wrap(
               //使用 wrap 包裹后超过后会自动换行
-              spacing: 8.0,
-              runSpacing: 8.0,
+              spacing: 8.0, //左右间隔
+              runSpacing: 8.0, //行间隔
               children: <Widget>[
                 Chip(label: Text('Life')),
                 Chip(
@@ -61,7 +61,9 @@ class _ChipDemoState extends State<ChipDemo> {
                 ),
                 Chip(
                   label: Text('City'),
-                  onDeleted: () {},
+                  onDeleted: () {
+                    //删除按钮
+                  },
                   deleteIcon: Icon(Icons.delete),
                   deleteIconColor: Colors.redAccent,
                   deleteButtonTooltipMessage:
@@ -71,7 +73,7 @@ class _ChipDemoState extends State<ChipDemo> {
                   //分割线
                   color: Colors.grey,
                   // height: 32.0,
-                  indent: 32.0,
+                  indent: 32.0, //添加缩进
                 ),
                 Wrap(
                   spacing: 8.0,

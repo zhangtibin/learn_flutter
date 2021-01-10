@@ -20,7 +20,7 @@ class _AlertDialogDemoState extends State<AlertDialogDemo> {
   Future _openAlertDialog() async {
     final action = await showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: false, //必须选择一个选项才能关闭对话框
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('AlertDialog'),
@@ -70,7 +70,9 @@ class _AlertDialogDemoState extends State<AlertDialogDemo> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Your choice is $_choice'),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

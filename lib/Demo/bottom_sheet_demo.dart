@@ -20,6 +20,7 @@ class _BottomSheetDemoState extends State<BottomSheetDemo> {
               Icon(Icons.pause_circle_outline),
               SizedBox(width: 16),
               Text('01:30 / 03:30'),
+              SizedBox(height: 20),
               Expanded(
                   child: Text('Fix you cosplay', textAlign: TextAlign.right)),
             ],
