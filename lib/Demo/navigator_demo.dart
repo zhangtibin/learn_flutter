@@ -6,33 +6,36 @@ class NavigatorDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column (
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget> [
+          children: <Widget>[
             FlatButton(
-              onPressed: () {
-                 Navigator.pushNamed(context, "/home");
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (BuildContext context)=> Page(title: 'Home',),
-                //   ),
-                // );
-              }, 
-              child: Text('Home')
-            ),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/home");
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context)=> Page(title: 'Home',),
+                  //   ),
+                  // );
+                },
+                child: Text('Home')),
             FlatButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/about');
-              }, 
-              child: Text('About')
-            ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/about');
+                },
+                child: Text('About')),
             FlatButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context)=>Page(title: "newPage")));
-              }, 
-              child: Text('新页面')
-            ),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          Page(title: "newPage")));
+                },
+                child: Text('新页面')),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/state-management');
+                },
+                child: Text('state-management')),
           ],
         ),
       ),

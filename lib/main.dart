@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/Demo/home_page.dart';
+import 'package:learn_flutter/Demo/state/state_management_demo.dart';
 import 'Demo/navigator_demo.dart';
 import 'Demo/form_demo.dart';
 import 'Demo/material_components.dart';
@@ -24,10 +25,11 @@ class MyApp extends StatelessWidget {
         //路由
         '/': (context) => NavigatorDemo(),
         // '/': (context) => HomePageDemo(),
-        '/home':(context) => HomePageDemo(),
+        '/home': (context) => HomePageDemo(),
         '/about': (context) => AbountPageDemo(),
         '/form': (context) => FormDemo(),
         '/material': (context) => MaterialComponentDemo(),
+        '/state-management': (context) => StateManagementDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.cyan,
