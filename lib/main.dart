@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/Demo/home_page.dart';
 import 'package:learn_flutter/Demo/state/state_management_demo.dart';
+import 'package:learn_flutter/Demo/stream/stream_demo.dart';
 import 'Demo/navigator_demo.dart';
 import 'Demo/form_demo.dart';
 import 'Demo/material_components.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/form': (context) => FormDemo(),
         '/material': (context) => MaterialComponentDemo(),
         '/state-management': (context) => StateManagementDemo(),
+        '/stream': (context) => StreamDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.cyan,
