@@ -32,7 +32,7 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     _textFieldSubject
         // .map((event) => 'event: $event')
         // .where((event) => event.length > 9)
-        .debounceTime(Duration(milliseconds: 500))
+        .debounceTime(Duration(milliseconds: 500)) //间隔多长时间
         .listen((event) => print(event));
 
     // Stream<String> _observable =

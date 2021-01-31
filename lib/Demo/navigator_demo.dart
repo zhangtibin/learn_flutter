@@ -46,6 +46,11 @@ class NavigatorDemo extends StatelessWidget {
                   Navigator.pushNamed(context, '/rxdart');
                 },
                 child: Text('RxDart')),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/bloc');
+                },
+                child: Text('Bloc')),
           ],
         ),
       ),
