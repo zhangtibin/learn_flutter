@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/Demo/bloc/bloc_demo.dart';
 import 'package:learn_flutter/Demo/home_page.dart';
+import 'package:learn_flutter/Demo/http/http_demo.dart';
 import 'package:learn_flutter/Demo/rxdart/rxdart_demo.dart';
 import 'package:learn_flutter/Demo/state/state_management_demo.dart';
 import 'package:learn_flutter/Demo/stream/stream_demo.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/stream': (context) => StreamDemo(),
         '/rxdart': (context) => RxDartDemo(),
         '/bloc': (context) => BlocDemo(),
+        '/http': (context) => HttpDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.cyan,
