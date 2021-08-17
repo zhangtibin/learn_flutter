@@ -66,6 +66,11 @@ class NavigatorDemo extends StatelessWidget {
                   Navigator.pushNamed(context, '/i18n');
                 },
                 child: Text('i18nDemo')),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/tab');
+                },
+                child: Text('TabDemo')),
           ],
         ),
       ),

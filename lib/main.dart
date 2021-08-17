@@ -14,6 +14,8 @@ import 'Demo/material_components.dart';
 import 'Demo/about_page_demo.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'Demo/tab/ZTBTabDemo.dart';
+
 void main() {
   // runApp(MyApp());
   runApp(MyApp());
@@ -54,6 +56,7 @@ class MyApp extends StatelessWidget {
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimationDemo(),
         '/i18n': (context) => I18nDemo(),
+        '/tab': (context) => ZTBTabDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.cyan,
