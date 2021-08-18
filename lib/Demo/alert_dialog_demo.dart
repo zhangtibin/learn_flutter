@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'dart:async';
 
+import 'custom_dialog/alert_dialog.dart';
+import 'custom_dialog/cupertino_dialog.dart';
+import 'custom_dialog/func_dialog.dart';
+import 'custom_dialog/sheet_dialog.dart';
+
 enum Action {
   OK,
   Cancel,
@@ -57,6 +62,39 @@ class _AlertDialogDemoState extends State<AlertDialogDemo> {
     }
   }
 
+  void _actionSheetPop() {
+    DialogFunctionUtil.bottomSheetDialog(context, ShowSheetDialog(items: ['相册', '相机'],
+      title: '请选择图片来源',
+      onTap: (index) {
+        print('object$index');
+      },
+    ));
+  }
+
+  //城市选择器
+  void _cityPickerPop() {
+    DialogFunctionUtil.bottomSheetDialog(context, ShowCupertinoDialog(
+      items: ['北京', '上海', '天津', '深圳', '武汉', '广州', '杭州'],
+      onTap: (int index, String res) {
+        print('object$index + $res');
+      },
+    ));
+  }
+
+  void _customerAlertPop() {
+    DialogFunctionUtil.popCenterDialog(
+      context,
+      ShowAlertDialog(
+        items: ['取消', '确认'],
+        title: '提示',
+        content: '确认要退出登录吗？',
+        onTap: (index) {
+          print('object$index');
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +120,9 @@ class _AlertDialogDemoState extends State<AlertDialogDemo> {
                 ),
               ],
             ),
+            FlatButton(onPressed: _actionSheetPop, child: Text('ActionSheet')),
+            FlatButton(onPressed: _cityPickerPop, child: Text('CityPicker')),
+            FlatButton(onPressed: _customerAlertPop, child: Text('CustomerAlert')),
           ],
         ),
       ),
