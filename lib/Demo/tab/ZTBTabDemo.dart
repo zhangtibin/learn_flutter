@@ -153,6 +153,12 @@ class _ZTBTabDemoState extends State<ZTBTabDemo> {
                     ));
               },
               child: new Text("AboutDialog控件")),
+          FlatButton(
+              color: Colors.orange,
+              onPressed: () {
+                Navigator.pushNamed(context, '/tabSegment');
+              },
+              child: new Text("TabSegmentDemo")),
         ],
       ),
     );

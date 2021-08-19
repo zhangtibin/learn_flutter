@@ -15,6 +15,7 @@ import 'Demo/about_page_demo.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'Demo/tab/ZTBTabDemo.dart';
+import 'Demo/tab_segment_demo.dart';
 
 void main() {
   // runApp(MyApp());
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         '/animation': (context) => AnimationDemo(),
         '/i18n': (context) => I18nDemo(),
         '/tab': (context) => ZTBTabDemo(),
+        '/tabSegment': (context) => TabSegmentDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.cyan,
