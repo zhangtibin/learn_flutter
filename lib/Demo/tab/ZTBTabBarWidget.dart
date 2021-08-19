@@ -186,6 +186,9 @@ class _ZTBTabBarWidgetState extends State<ZTBTabBarWidget>
         ),
       );
     }
+    else {
+      return Container();
+    }
   }
 }
 
