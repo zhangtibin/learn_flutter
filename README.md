@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+flutter 常用组件
+
+基于 flutter version： 1.17.5
+    dart version：2.8.4
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
